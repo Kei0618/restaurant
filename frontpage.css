@@ -1,0 +1,220 @@
+body {background-image: url(myimg/紋理木板.jpg);
+  margin-top: -20px;
+  z-index: 9999;
+}
+
+/*  myfront*/
+
+
+.fronttitle{text-align: center;
+   font-family: DFKai-sb;
+  color:rgb(232, 239, 34);
+  text-shadow: 0.7px 0.7px rgb(20, 55, 162);}
+/*p font*/
+nav p {
+  margin-bottom: 0;
+}
+
+
+
+/*navbar*/
+.navbar-brand,
+.nav-link,
+.navbar-nav {
+  color: white;
+  font-size: 3.2rem;
+  font-family: DFKai-sb;
+  text-shadow:0.5px 0.5px orangered;
+ 
+}
+
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.icon-white{color:white;}
+
+.container-fluid.my-container-fluid {
+  justify-content: center;
+  
+}
+
+.nav-item {
+  text-align: center;
+}
+
+/*carousel imgslide*/
+.carousel-item {
+  object-fit: cover;
+  margin-top: 110px;
+  height: auto;
+  margin-left: 24%;
+  max-width: 50%;
+}
+
+
+b {
+  color: rgb(18, 17, 18);
+  font-size: 30px;
+  text-shadow: 5px 5px 5px rgb(53, 72, 93);
+  ;
+}
+
+a:hover{color: crimson;}
+a{text-decoration: none;color:white;}
+.carousel-indicators{
+  margin-bottom: 10% ;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgb(224, 108, 12);
+  border-radius: 40%;
+  width: 25px;
+  height: 30px;
+}
+
+.carousel-control-prev {
+  left: 24%;
+  margin-top: 25%;
+}
+
+.carousel-control-next {
+  right: 26%;
+  margin-top: 25%;
+}
+.tbt{margin-bottom: 1%;}
+
+
+
+
+
+/*@media (min-width:920px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top:24%;
+    width: 25px;
+    height: 28px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 27%;
+    width: 25px;
+    height: 28px;
+  }
+
+  ;
+}*/
+/*@media (min-width:800px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top: 28%;
+    width: 25px;
+    height: 28px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 28%;
+    width: 25px;
+    height: 28px;
+  }
+
+  ;
+}*/
+@media (max-width:650px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top: 30%;
+    width: 15px;
+    height: 18px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 30%;
+    width: 15px;
+    height: 18px;
+  }
+
+  ;
+}
+@media (max-width:600px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top: 45%;
+    width: 15px;
+    height: 18px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 30%;
+    width: 15px;
+    height: 18px;
+  }
+
+  ;
+}
+@media (max-width:550px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top: 30%;
+    width: 15px;
+    height: 18px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 45%;
+    width: 15px;
+    height: 18px;
+  }
+
+  ;
+}
+@media (min-width:500px) {
+  .carousel-control-prev {
+    left: 24%;
+    margin-top: 15%;
+    width: 15px;
+    height: 18px;
+  }
+
+  .carousel-control-next {
+    right: 26%;
+    margin-top: 10%;
+    width: 15px;
+    height: 18px;
+  }
+
+  ;
+}
+@media (max-width:510px) {
+
+  .tbt{
+    margin-bottom: 20% ;
+  }
+  ;
+}
+
+
+/*newsset*/
+
+
+.mynews{
+  flex: 1;
+
+  font-family: DFKai-sb;
+background-size:cover;
+  background-color: rgb(228, 111, 9);
+}
+.mynewsfont{text-align: center;
+  color:brown;
+}
+
+
+
+#frontshowing{z-index: 9999;}

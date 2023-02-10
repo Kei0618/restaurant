@@ -1,0 +1,49 @@
+body{background-image: url(myimg/木板.\ 更正jpg.jpg);}
+
+/*navbar*/
+.navbar-brand,
+.nav-link,
+.navbar-nav {
+  color: white;
+  font-size: 3.2rem;
+  font-family: DFKai-sb;
+  text-shadow:0.5px 0.5px orangered;
+ 
+}
+
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.icon-white{color:white;}
+
+.container-fluid.my-container-fluid {
+  justify-content: center;
+  
+}
+
+.nav-item {
+  text-align: center;
+}
+
+
+/*menu*/
+.mymenudisplaytop {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  
+  .mymenudisplay {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .mymenuinthe1 {
+    width: 35%;
+  }
+/*menu set*/
+.mymenu {
+    margin-top: 90px;
+  }

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="reservation.css">
+
+</head>
+
+<body >
+
+    <!--導覽列-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top navbar-transparent py-0   ">
+        <div class="container-fluid my-container-fluid  " style="background-color:black;">
+            <a class="navbar-brand">
+                <p class="fs-1" id="myp">饗饕</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-bi bi-caret-down icon-white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-5 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="frontpage.html">
+                            <p class="fs-1">首頁</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">
+                            <p class="fs-1">MENU</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html" tabindex="-1" aria-disabled="true">
+                            <p class="fs-1">關於饗饕</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservation.html" tabindex="-1" aria-disabled="true">
+                            <p class="fs-1">我要訂位</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <br>
+    <!--輸入表單-->
+    <form class="myform">
+        <div class="form-group">
+            <p class="fs-1 reservesystem" >訂位系統</p>
+            <label class="fs-5 reserveform" for="name"  required>*姓名/Name</label>
+            <input  type="name" class="form-control" id="name"
+                placeholder="name" name="custom" value="" required="required">
+            <!--文字提醒區域-->
+            <p id="nameNotInput" class="formremind"></p>
+            <label class="fs-5 reserveform" for="exampleFormControlInput1">電子信箱/Email
+                address</label>
+            <input type="email" name="customemail"
+                class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value=""
+                required="required">
+            <label class="fs-5 reserveform" for="customnumber" >*電話號碼/Number</label>
+            <input  type="number" name="customephone"
+                class="form-control" id="customnumber" placeholder="0912345678" value="" required="required">
+            <!--文字提醒區域-->
+            <p id="numberNotInput" class="formremind"></p>
+        </div>
+        <div class="form-group">
+            <label class="fs-5 reserveform" for="customnumber" style="font-family: DFKai-sb;">請選擇人數(含小孩)</label>
+            <select  name="cpeople" class="form-control mypeople"
+                id="customnumber" required="required">
+                <option value="1位">1位</option>
+                <option value="2位">2位</option>
+                <option value="3位">3位</option>
+                <option value="4位">4位</option>
+                <option value="5位">5位</option>
+                <option value="6位">6位</option>
+                <option value="7位">7位</option>
+                <option value="8位">8位</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="fs-5 reserveform" for="myreason" style="font-family: DFKai-sb;">請問您來用餐的原因</label>
+            <select  multiple class="form-control" id="myreason">
+                <option value="">慶生</option>
+                <option value="">聚餐</option>
+                <option value="">慶祝</option>
+                <option value="">尾牙春酒</option>
+                <option value="">其他</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="fs-5 reserveform" for="exampleFormControlTextarea1"
+                style="font-family: DFKai-sb;">特殊需求請在這註明(對海鮮過敏等)</label>
+            <textarea  class="form-control"
+                id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <br>
+
+        <div class="mydatesend">
+            <div>
+                <label class=" reserveformtime" for="mydateline">請選擇日期</label>
+                <input name="mydatesend1" type="date" id="mydateline" required>
+                <p class="fs-1 reserveformtime" >
+                    為維持大家的用餐品質，不開放當天訂位，請多多包涵。 </p>
+            </div>
+        </div>
+
+        <br>
+
+        <p class="fs-1 reserveformtime">請選擇時間</p>
+        <p id="remindtime" class="formremind2"></p>
+        <br>
+        <div class="myrdo" id="reservatime" name="myrdts">
+            <input type="hidden" name="rdt" value="null">
+            <input type="radio" name="rdt" id="rdtime3" class="myrdtol" value="11:00">
+            <label for="rdtime3">
+                <p class="myretime" >11:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime5" class="myrdtol" value="12:00" style="margin-left: 1%;">
+            <label for="rdtime5">
+                <p class="myretime" >12:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime6" class="myrdtol" value="12:30" style="margin-left: 1%;">
+            <label for="rdtime6">
+                <p class="myretime" >12:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime7" class="myrdtol" value="13:00" style="margin-left: 1%;">
+            <label for="rdtime7">
+                <p class="myretime">13:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime8" class="myrdtol" value="13:30" style="margin-left: 1%;">
+            <label for="rdtime8">
+                <p class="myretime" >13:30</p>
+            </label>
+            <br>
+            <input type="radio" name="rdt" id="rdtime9" class="myrdtol" value="14:00">
+            <label for="rdtime9">
+                <p class="myretime">14:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime10" class="myrdtol" value="14:30" style="margin-left: 1%;">
+            <label for="rdtime10">
+                <p class="myretime">14:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime11" class="myrdtol" value="15:00" style="margin-left: 1%;">
+            <label for="rdtime11">
+                <p class="myretime">15:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime12" class="myrdtol" value="15:30" style="margin-left: 1%;">
+            <label for="rdtime12">
+                <p class="myretime">15:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime13" class="myrdtol" value="16:00" style="margin-left: 1%;">
+            <label for="rdtime13">
+                <p class="myretime">16:00</p>
+            </label>
+            <br>
+            <input type="radio" name="rdt" id="rdtime14" class="myrdtol" value="16:30">
+            <label for="rdtime14">
+                <p class="myretime">16:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime15" class="myrdtol" value="17:00" style="margin-left: 1%;">
+            <label for="rdtime15">
+                <p class="myretime">17:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime16" class="myrdtol" value="17:30" style="margin-left: 1%;">
+            <label for="rdtime16">
+                <p class="myretime">17:30</p>
+            </label>
+            <input type="radio" name="rdt" id="rdtime17" class="myrdtol" value="18:00" style="margin-left: 1%;">
+            <label for="rdtime17">
+                <p class="myretime">18:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime18" class="myrdtol" value="18:30" style="margin-left: 1%;">
+            <label for="rdtime18">
+                <p class="myretime">18:30</p>
+            </label>
+            <br>
+            <input type="radio" name="rdt" id="rdtime19" class="myrdtol" value="19:00">
+            <label for="rdtime19">
+                <p class="myretime">19:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime20" class="myrdtol" value="19:30" style="margin-left: 1%;">
+            <label for="rdtime20">
+                <p class="myretime">19:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime21" class="myrdtol" value="20:00" style="margin-left: 1%;">
+            <label for="rdtime21">
+                <p class="myretime">20:00</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime22" class="myrdtol" value="20:30" style="margin-left: 1%;">
+            <label for="rdtime22">
+                <p class="myretime">20:30</p>
+            </label>
+
+            <input type="radio" name="rdt" id="rdtime23" class="myrdtol" value="21:00" style="margin-left: 1%;">
+            <label for="rdtime23">
+                <p class="myretime">21:00</p>
+            </label>
+
+
+        </div>
+        <!--<p class="fs-2" style="text-align:center ;font-family: DFKai-sb;">請選擇時間</p>
+        <div class="animated_btn" id="btns">
+            <div id="btnall">
+               <input type="text">
+                <div>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="10:00" id="button1">
+                        10:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="10:15" id="button2">
+                        10:15</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="10:30" id="button3">
+                        10:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="11:00" id="button4">
+                        11:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="11:30" id="button5">
+                        11:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="12:00" id="button6">
+                        12:00</button>
+                </div>
+                <br>
+                <div>
+
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="12:30" id="button7">
+                        12:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="13:00" id="button8">
+                        13:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="13:30" id="button9">
+                        13:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="14:00"
+                        id="button10"> 14:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="14:30"
+                        id="button11"> 14:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="15:00"
+                        id="button12"> 15:00</button>
+                </div>
+
+                <br>
+                <div>
+
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="15:30"
+                        id="button13"> 15:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="16:00"
+                        id="button14"> 16:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="16:30"
+                        id="button15"> 16:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="17:00"
+                        id="button16"> 17:00</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="17:30"
+                        id="button17"> 17:30</button>
+                    <button name="myselectdate" type="button" class="btn" onclick="mytime()" value="18:00"
+                        id="button18"> 18:00</button>
+                </div>
+            </div>
+            <br>
+            <div>
+
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button19"> 18:30</button>
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button20"> 19:00</button>
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button21"> 19:30</button>
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button21"> 20:00</button>
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button23"> 20:30</button>
+                <button name="myselectdate" type="button" class="btn" onclick="" value="" id="button24"> 21:00</button>
+
+            </div>
+        </div>-->
+
+        <br>
+        <br>
+        <br>
+
+
+        <br>
+        <div class="sumitbtn">
+            <button type="submit" class="mysumitbtn" onclick="" id="sumbutton">確認送出</button>
+        </div>
+    </form>
+
+
+
+
+
+    <script>
+
+    </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+    <script src="front.js"></script>
+    <script>
+
+        /* function selectedValue() {
+ 
+             var selectefValue = $('#customnumber').val();
+             
+ 
+         }*/
+
+
+
+        $(document).ready(function () {
+            $("select.mypeople").change(function () {
+                var selectedItem = $(this).children("option:selected").val();
+
+            });
+
+
+
+        });
+
+        /*var myreasonb = $("#myreason").val();
+
+            console.log(myreasonb);*/
+
+
+        /*取radio內值>>搬到下方的submit*/
+        /*function getRadioValue() {
+            var radio = document.getElementsByName('rdt');
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked)
+                    alert(radio[i].value);
+            }
+
+        }*/
+
+        /*姓名 時間*/
+        $(".mysumitbtn").click(function () {
+
+            var customn = $(`input[name="custom"]`).val();
+            var resersend = $(`input[name="mydatesend1"]`).val();
+            var pps = $(`select[name="cpeople"]`).val()
+
+            var radio = document.getElementsByName('rdt');
+            var myphonenumber = $(`input[name="customephone"]`).val();
+            console.log(myphonenumber)
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked)
+                    var ra = radio[i].value;
+            }
+            if (customn == false && myphonenumber == false && ra == null) {
+                alert('*為必填項目[姓名、電話、時間]');
+                document.getElementById('nameNotInput').innerText = "請輸入您的名稱!";
+                document.getElementById('numberNotInput').innerText = "請輸入電話號碼!"
+                document.getElementById('remindtime').innerText = "請選擇時間!"
+            }
+            else if (customn == false && myphonenumber == false) {
+                alert('*為必填項目[姓名、電話]');
+                document.getElementById('nameNotInput').innerText = "請輸入您的名稱!";
+                document.getElementById('numberNotInput').innerText = "請輸入電話號碼!"
+            }
+            else if (myphonenumber == false && ra == null) {
+                alert('*為必填項目[電話、時間]');
+                document.getElementById('numberNotInput').innerText = "請輸入電話號碼!";
+                document.getElementById('remindtime').innerText = "請選擇時間!"
+            }
+            else if (customn == false && myphonenumber.length <= 9) {
+                alert('*為必填項目');
+                document.getElementById('nameNotInput').innerText = "請輸入您的名稱!";
+                document.getElementById('numberNotInput').innerText = "電話號碼長度錯誤!"
+            }
+            else if (customn == false && myphonenumber.length >= 11) {
+                alert('*為必填項目');
+                document.getElementById('nameNotInput').innerText = "請輸入您的名稱!";
+                document.getElementById('numberNotInput').innerText = "電話號碼長度錯誤!"
+            }
+
+            else if (myphonenumber.length <= 9 && ra == null) {
+                alert('請選擇時間、電話號碼長度錯誤!');
+                document.getElementById('numberNotInput').innerText = "電話號碼長度錯誤!";
+                document.getElementById('remindtime').innerText = "請選擇時間!"
+            }
+            else if (customn == false) {
+                alert('*為必填項目[姓名]');
+                document.getElementById('nameNotInput').innerText = "請輸入您的名稱!";
+            }
+
+            else if (myphonenumber == false) {
+                alert('*為必填項目'); document.getElementById('numberNotInput').innerText = "請輸入電話號碼!"
+            }
+
+            else if (myphonenumber.length <= 9) {
+                alert('電話號碼長度錯誤!');
+                document.getElementById('numberNotInput').innerText = "電話號碼長度錯誤!";
+            }
+            else if (myphonenumber.length >= 11) {
+                alert('電話號碼長度錯誤!');
+                document.getElementById('numberNotInput').innerText = "電話號碼長度錯誤!";
+            }
+            else if (ra == null) { alert('請選擇時間'); document.getElementById('remindtime').innerText = "請選擇時間" }
+            else {
+                alert('已收到您的訂位訊息' + "\r"
+                    + '姓名:' + customn + "\r" + '人數:' + pps + "\r" +
+                    '您的電話:' + myphonenumber + "\r"
+                    + "預約日期:" + resersend + '\r' + "預約時間:"
+                    + ra
+
+                );
+            }
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

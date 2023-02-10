@@ -1,0 +1,150 @@
+body{
+    background-image: url(myimg/古老牆壁.jpg);
+}
+/*  myfront*/
+
+
+.fronttitle{text-align: center;
+    font-family: DFKai-sb;
+   color:rgb(232, 239, 34);
+   text-shadow: 0.7px 0.7px rgb(20, 55, 162);}
+ /*p font*/
+ nav p {
+   margin-bottom: 0;
+ }
+ 
+ 
+ 
+ /*navbar*/
+ .navbar-brand,
+ .nav-link,
+ .navbar-nav {
+   color: white;
+   font-size: 3.2rem;
+   font-family: DFKai-sb;
+   text-shadow:0.5px 0.5px orangered;
+  
+ }
+ 
+ 
+ .navbar-collapse {
+   flex-grow: 0;
+ }
+ 
+ .icon-white{color:white;}
+ 
+ .container-fluid.my-container-fluid {
+   justify-content: center;
+   
+ }
+ 
+ .nav-item {
+   text-align: center;
+ }
+ 
+ /*carousel imgslide*/
+ .carousel-item {
+   object-fit: cover;
+   margin-top: 110px;
+   height: auto;
+   margin-left: 24%;
+   max-width: 50%;
+ }
+
+
+ /*font*/
+.myaboutfont {
+    margin-top: 150px;
+    text-align: center;
+    font-family: DFKai-sb;
+    text-shadow: 0.3px 0.3px rgb(224, 108, 12);
+  }
+  
+  .myaboutfont2 {
+    margin-top: 30px;
+    color: #0b5c92;
+    text-align: center;
+    text-shadow: 0.2px 0.2px rgb(12, 12, 12);
+    font-family: DFKai-sb;
+  }
+
+  /*mymenu*/
+.mymenu{
+    display: flex;justify-content: space-between;}
+
+
+    /*介紹文字*/
+.myproduceinr {
+ 
+  object-fit: cover;
+  color: #0b5c92;
+  margin-left: 10%;   
+  margin-top: 17%;
+  text-shadow: 0.3px 0.3px rgb(12, 12, 12);
+  font-family: DFKai-sb;
+}
+
+
+/*about*/
+.myaboutfont {
+    margin-top: 150px;
+    text-align: center;
+    font-family: DFKai-sb;
+    text-shadow: 0.3px 0.3px rgb(224, 108, 12);
+  }
+  
+  .myaboutfont2 {
+    margin-top: 30px;
+    color: #0b5c92;
+    text-align: center;
+    text-shadow: 0.2px 0.2px rgb(12, 12, 12);
+    font-family: DFKai-sb;
+  }
+  
+  .myaboutimg {
+    object-fit: cover;
+    height: auto;
+    width: 45%;
+    margin-top: 10%;
+  }
+  
+  .myaboutimginr {
+    
+    object-fit: cover;
+    height: auto;
+    width: 45%;
+    margin-top: 5%;
+  }
+  
+  .myaboutimginrlast{
+    
+    object-fit: cover;
+    height: auto;
+    width: 45%;
+    margin-top: 5%;
+  }
+  
+  .myproduce {
+   
+    color: #0b5c92;
+    margin-right: 20%;
+    margin-top: 20%;
+    text-shadow: 0.3px 0.3px rgb(12, 12, 12);
+    font-family: DFKai-sb;
+  }
+  
+
+/*map*/
+/* about map*/
+@media (max-width:1200px) {.mymap{width:45%; height:350px}
+  
+}
+@media (max-width:700px) {.mymap{width:45%; height:220px}
+  
+}
+@media (max-width:1200px) {.mynewsfont{font-size: 12px;}
+  
+}
+@media (max-width:700px) {.mynewsfont{font-size: 6px;}
+  
+}
